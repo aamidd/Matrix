@@ -43,13 +43,13 @@ public class Matrix {
         return new Matrix(resultMat);
     }
 
-    public int determinant() {
+    public long determinant() {
         if (getRow() != getCol())
             throw new RuntimeException("matrix is not a square");
-        int det = 0;
+        long det = 0;
         int len = getRow();
         if (getRow() == 2)
-            det = get(0, 0) * get(1, 1) - get(0, 1) * get(1, 0);
+            det = (long) get(0, 0) * get(1, 1) - (long) get(0, 1) * get(1, 0);
         else {
             int[][] tmpMat = new int[len - 1][len - 1];
             for (int j = 0; j < len; j++) {
