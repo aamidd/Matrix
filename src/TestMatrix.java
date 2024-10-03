@@ -13,10 +13,10 @@ public class TestMatrix {
         };
 
         int[][] C = {
-                {18, 3, 45, 2, 7},
+                {18, 3, 5, 2, 7},
                 {11, 3, 2, 4, 7},
                 {1, 2, 4, 6, 10},
-                {2, 3, 4, 6, 8},
+                {2, 3, 4, 6, 18},
                 {2, 3, 5, 7, 11}
         };
 
@@ -27,5 +27,6 @@ public class TestMatrix {
         Matrix mB = new Matrix(B);
         Matrix R = mA.mult(mB);
         System.out.println(R);
+        System.out.println(mA.mult(2));
     }
 }

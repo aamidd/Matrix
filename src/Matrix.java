@@ -43,6 +43,16 @@ public class Matrix {
         return new Matrix(resultMat);
     }
 
+    public Matrix mult(int nToMultiply) {
+        int[][] tmpMat = new int[getRow()][getCol()];
+        for (int i = 0; i < getRow(); i++) {
+            for (int j = 0; j < getCol(); j++) {
+                tmpMat[i][j] = get(i, j) * nToMultiply;
+            }
+        }
+        return new Matrix(tmpMat);
+    }
+
     public long determinant() {
         if (getRow() != getCol())
             throw new RuntimeException("matrix is not a square");
